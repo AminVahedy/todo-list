@@ -45,7 +45,7 @@ export default function Search({
     }
   }
   return (
-    <div className="w-[90%] pb-[20px] flex items-center justify-center gap-[20px] border-b border-[#F1C40F]">
+    <div className="w-[100%] sm:w-[90%] pb-[20px] flex items-center justify-center gap-[20px] border-b border-[#F1C40F]">
       <input
         ref={inputRef}
         onKeyDown={(e) => handleKeyDown(e)}
@@ -53,7 +53,7 @@ export default function Search({
         onChange={(e) => handleSearch(e)}
         type="text"
         placeholder="Write your tasks..."
-        className="p-[5px] text-[black] w-[50%] bg-[#fff] border-2 border-[#F1C40F] rounded-lg placeholder:text-[gray]"
+        className="p-[5px] text-[black] w-[65%] sm:w-[50%] bg-[#fff] border-2 border-[#F1C40F] rounded-lg placeholder:text-[gray] placeholder:text-[14px] sm:placeholder:text-[16px]"
       ></input>
       <button
         onClick={submitSearch}

@@ -21,17 +21,17 @@ export default function Items({
   }
   return (
     <div className="w-[100%] flex items-center justify-between">
-      <p className="text-[#F1C40F] text-[18px]">{item.name}</p>
+      <p className="text-[#F1C40F] text-[16px] sm:text-[18px]">{item.name}</p>
       <div className="flex item-center gap-[20px]">
         <span
-          className="text-[#fff] text-[16px] cursor-pointer p-[3px] border border-[#fff] rounded-md hover:text-[#F1C40F] hover:border-[#F1C40F]"
+          className="text-[#fff] text-[14px] sm:text-[16px] cursor-pointer px-[10px] py-[3px] border border-[#fff] rounded-md hover:text-[#F1C40F] hover:border-[#F1C40F]"
           onClick={() => handleEdit(item)}
         >
           +
         </span>
         <button
           onClick={() => handleDeleteItem(item)}
-          className="cursor-pointer text-[16px] p-[5px] rounded-md text-[#fff] border border-[#fff] hover:text-[red] hover:border-[red]"
+          className="cursor-pointer text-[14px] sm:text-[16px] p-[5px] rounded-md text-[#fff] border border-[#fff] hover:text-[red] hover:border-[red]"
         >
           delete
         </button>
