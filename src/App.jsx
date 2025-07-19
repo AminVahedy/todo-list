@@ -24,6 +24,13 @@ function App() {
             },
             duration: 3000,
           },
+          error: {
+            style: {
+              background: "black",
+              color: "red",
+            },
+            duration: 3000,
+          },
           style: {
             fontSize: "16px",
             padding: "16px 24px",

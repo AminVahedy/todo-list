@@ -19,21 +19,29 @@ export default function Search({
   function submitSearch() {
     if (!quary) return;
 
-    setWorkList([...workList, { name: quary }]);
-
-    setQuary("");
-
-    toast.success("Your Task succesfuly add");
-  }
-  function handleKeyDown(e) {
-    if (e.key === "Enter") {
-      if (!quary) return;
-
+    if (!workList.some((item) => item.name === quary)) {
       setWorkList([...workList, { name: quary }]);
 
       setQuary("");
 
       toast.success("Your Task succesfuly add");
+    } else {
+      toast.error("Your Task alredy exist");
+    }
+  }
+  function handleKeyDown(e) {
+    if (e.key === "Enter") {
+      if (!quary) return;
+
+      if (!workList.some((item) => item.name === quary)) {
+        setWorkList([...workList, { name: quary }]);
+
+        setQuary("");
+
+        toast.success("Your Task succesfuly add");
+      } else {
+        toast.error("Your Task alredy exist");
+      }
     }
   }
   return (
